@@ -5,7 +5,6 @@ import { FaInstagram, FaWhatsapp, FaBars, FaTimes, FaCut, FaUserAlt } from 'reac
 import { GiBeard, GiHairStrands } from 'react-icons/gi';
 import { MdFace, MdColorize, MdStyle } from 'react-icons/md';
 import { TbMassage, TbWand } from 'react-icons/tb';
-import { BsScissors } from 'react-icons/bs';
 import { useState } from 'react';
 
 export default function Home() {
