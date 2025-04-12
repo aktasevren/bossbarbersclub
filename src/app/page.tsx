@@ -48,7 +48,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-40 bg-black/90 py-4">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-          <div className="text-xl md:text-2xl font-bold text-[#C8A97E]">Boss Barber's Club</div>
+          <div className="text-xl md:text-2xl font-bold text-[#C8A97E]">Boss Barber&apos;s Club</div>
           <button 
             onClick={() => setIsMenuOpen(true)} 
             className="text-2xl text-[#C8A97E] lg:hidden"
@@ -83,27 +83,6 @@ export default function Home() {
           >
             RANDEVU AL
           </button>
-        </div>
-      </section>
-
-      {/* Story Section */}
-      <section id="story" className="py-16 md:py-20 px-4 bg-zinc-900">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Hikayemiz</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            <div className="text-center bg-black/30 p-6 rounded-lg hover:bg-black/40 transition-colors">
-              <h3 className="text-xl md:text-2xl font-bold text-[#C8A97E] mb-4">2007</h3>
-              <p className="text-gray-400">Berberlik tutkumuzla yola çıktık</p>
-            </div>
-            <div className="text-center bg-black/30 p-6 rounded-lg hover:bg-black/40 transition-colors">
-              <h3 className="text-xl md:text-2xl font-bold text-[#C8A97E] mb-4">2012</h3>
-              <p className="text-gray-400">İlk şubemizi açtık</p>
-            </div>
-            <div className="text-center bg-black/30 p-6 rounded-lg hover:bg-black/40 transition-colors">
-              <h3 className="text-xl md:text-2xl font-bold text-[#C8A97E] mb-4">2016</h3>
-              <p className="text-gray-400">Türkiye'nin en iyi berberleri arasına girdik</p>
-            </div>
-          </div>
         </div>
       </section>
 
