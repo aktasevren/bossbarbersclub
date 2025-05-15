@@ -132,7 +132,7 @@ export default function Home() {
                 aria-label="Sercan Çınar Instagram"
               >
                 <FaInstagram />
-                <span>@cnr.sercan</span>
+                <span>&apos;cnr.sercan</span>
               </a>
             </div>
             <div className="bg-zinc-900 p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors">
@@ -155,7 +155,7 @@ export default function Home() {
                 aria-label="Berke Akyüz Instagram"
               >
                 <FaInstagram />
-                <span>@akyuzberkee</span>
+                <span>&apos;akyuzberkee</span>
               </a>
             </div>
           </div>
