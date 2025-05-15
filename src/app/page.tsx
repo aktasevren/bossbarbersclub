@@ -82,7 +82,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-4 md:gap-8">
             <div className="flex-1">
-              <h1 className="font-ebgaramond text-white text-2xl md:text-[36px] font-normal leading-[38px] md:leading-[58px] pl-2 md:pl-[7] text-left transition-all duration-500 ease antialiased block mb-0" style={{boxSizing:'border-box',clear:'both',cursor:'pointer',display:'block',letterSpacing:'normal',margin:0,overflowWrap:'break-word',textDecorationColor:'#fff',textDecorationLine:'none',textDecorationStyle:'solid',textDecorationThickness:'auto',textRendering:'optimizeLegibility',textSizeAdjust:'100%',textTransform:'none',WebkitFontSmoothing:'antialiased',WebkitTapHighlightColor:'rgba(0,0,0,0)'}}>Boss Barbers Club</h1>
+              <h1 className="font-ebgaramond text-white text-2xl md:text-[36px] font-normal leading-[38px] md:leading-[58px] pl-2 md:pl-[7] text-left transition-all duration-500 ease antialiased block mb-0" style={{boxSizing:'border-box',clear:'both',cursor:'pointer',display:'block',letterSpacing:'normal',margin:0,overflowWrap:'break-word',textDecorationColor:'#fff',textDecorationLine:'none',textDecorationStyle:'solid',textDecorationThickness:'auto',textRendering:'optimizeLegibility',textSizeAdjust:'100%',textTransform:'none',WebkitFontSmoothing:'antialiased',WebkitTapHighlightColor:'rgba(0,0,0,0)'}}>Boss Barbers Club&apos;un</h1>
               <button 
                 onClick={handleRandevuClick}
                 className="bg-[#C58154] text-white font-bold py-2 md:py-3 px-4 md:px-8 rounded hover:bg-[#A0522D] transition-colors text-base md:text-lg mt-2 block"
@@ -173,7 +173,7 @@ export default function Home() {
       <section id="services" className="py-10 md:py-20 px-2 md:px-4 bg-gradient-to-b from-zinc-900 to-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-ebgaramond tracking-tight">Hizmetlerimiz</h2>
-          <p className="text-center text-zinc-400 mb-10 font-poppins">Boss Barbers Club'da sunduğumuz profesyonel hizmetler</p>
+          <p className="text-center text-zinc-400 mb-10 font-poppins">Boss Barbers Club&apos;da sunduğumuz profesyonel hizmetler</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Saç Kesimi</div>
             <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Sakal Kesimi</div>
