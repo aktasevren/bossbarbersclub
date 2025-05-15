@@ -1,10 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { FaInstagram, FaWhatsapp, FaBars, FaTimes, FaCut, FaUserAlt } from 'react-icons/fa';
-import { GiBeard, GiHairStrands } from 'react-icons/gi';
-import { MdFace, MdColorize, MdStyle } from 'react-icons/md';
-import { TbMassage, TbWand } from 'react-icons/tb';
+import { FaInstagram, FaWhatsapp, FaBars, FaTimes } from 'react-icons/fa';
 import { useState } from 'react';
 import VerticalServiceSlider from "./VerticalServiceSlider";
 
