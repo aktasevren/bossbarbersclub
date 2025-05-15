@@ -1,8 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins, Montserrat, EB_Garamond } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-poppins',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '900'],
+  variable: '--font-montserrat',
+});
+
+const ebGaramond = EB_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-ebgaramond',
+});
 
 export const metadata: Metadata = {
   title: "Boss Barbers Club - Profesyonel Berberlik Hizmetleri",
@@ -16,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body className={inter.className}>{children}</body>
+      <body className={`${poppins.variable} ${montserrat.variable} ${ebGaramond.variable} font-poppins`}>{children}</body>
     </html>
   );
 }

@@ -6,6 +6,7 @@ import { GiBeard, GiHairStrands } from 'react-icons/gi';
 import { MdFace, MdColorize, MdStyle } from 'react-icons/md';
 import { TbMassage, TbWand } from 'react-icons/tb';
 import { useState } from 'react';
+import VerticalServiceSlider from "./VerticalServiceSlider";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,24 +46,32 @@ export default function Home() {
       </div>
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-40 bg-black/90 py-4">
+      <nav className="fixed top-0 w-full z-40 bg-[#F5E6D3] py-2 md:py-4">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-          <div className="text-xl md:text-2xl font-bold text-[#C8A97E]">Boss Barber&apos;s Club</div>
+          <div className="relative w-24 h-10 md:w-32 md:h-12">
+            <Image
+              src="/images/logo.png"
+              alt="Boss Barbers Club Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </div>
           <button 
             onClick={() => setIsMenuOpen(true)} 
-            className="text-2xl text-[#C8A97E] lg:hidden"
+            className="text-2xl text-[#C58154] lg:hidden"
             aria-label="Menüyü Aç"
           >
             <FaBars />
           </button>
-          <div className="hidden lg:flex gap-8">
-            <a href="#about" className="hover:text-[#C8A97E] transition-colors">Hakkımızda</a>
-            <a href="#services" className="hover:text-[#C8A97E] transition-colors">Hizmetler</a>
-            <a href="#team" className="hover:text-[#C8A97E] transition-colors">Ekibimiz</a>
-            <a href="#contact" className="hover:text-[#C8A97E] transition-colors">İletişim</a>
+          <div className="hidden lg:flex items-center gap-8">
+            <a href="#about" className="text-[#C58154] hover:text-[#A0522D] transition-all duration-300 text-xs font-semibold uppercase tracking-normal leading-[14px] h-[14px] relative block cursor-pointer antialiased flex items-center">Hakkımızda</a>
+            <a href="#services" className="text-[#C58154] hover:text-[#A0522D] transition-all duration-300 text-xs font-semibold uppercase tracking-normal leading-[14px] h-[14px] relative block cursor-pointer antialiased flex items-center">Hizmetler</a>
+            <a href="#team" className="text-[#C58154] hover:text-[#A0522D] transition-all duration-300 text-xs font-semibold uppercase tracking-normal leading-[14px] h-[14px] relative block cursor-pointer antialiased flex items-center">Ekibimiz</a>
+            <a href="#contact" className="text-[#C58154] hover:text-[#A0522D] transition-all duration-300 text-xs font-semibold uppercase tracking-normal leading-[14px] h-[14px] relative block cursor-pointer antialiased flex items-center">İletişim</a>
             <button 
               onClick={handleRandevuClick}
-              className="bg-[#C8A97E] text-black px-4 py-2 rounded hover:bg-[#B69A6E] transition-colors"
+              className="bg-[#C58154] text-white px-6 py-3 rounded hover:bg-[#A0522D] transition-all duration-300 text-xs font-semibold uppercase tracking-normal leading-[14px] relative cursor-pointer antialiased flex items-center justify-center min-h-[40px]"
             >
               Randevu Al
             </button>
@@ -71,22 +80,35 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="about" className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="absolute inset-0 bg-[url('/barber-bg.jpg')] bg-cover bg-center opacity-40"></div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-7xl font-bold mb-6">HAKKIMIZDA</h1>
-          <p className="text-lg md:text-xl mb-8">Saç ve sakal bakımında tutkunuzu ve profesyonelliğinizi yansıtın</p>
-          <button 
-            onClick={handleRandevuClick}
-            className="bg-[#C8A97E] text-black font-bold py-3 px-8 rounded hover:bg-[#B69A6E] transition-colors text-lg"
-          >
-            RANDEVU AL
-          </button>
+      <section id="about" className="relative min-h-screen flex items-center justify-center pt-24 md:pt-20 pb-8 md:pb-0">
+        <div className="absolute inset-0 bg-[url('/images/slider-one.jpg')] bg-cover bg-center opacity-40"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 w-full">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-4 md:gap-8">
+            <div className="flex-1">
+              <h1 className="font-ebgaramond text-white text-2xl md:text-[36px] font-normal leading-[38px] md:leading-[58px] pl-2 md:pl-[7] text-left transition-all duration-500 ease antialiased block mb-0" style={{boxSizing:'border-box',clear:'both',cursor:'pointer',display:'block',letterSpacing:'normal',margin:0,overflowWrap:'break-word',textDecorationColor:'#fff',textDecorationLine:'none',textDecorationStyle:'solid',textDecorationThickness:'auto',textRendering:'optimizeLegibility',textSizeAdjust:'100%',textTransform:'none',WebkitFontSmoothing:'antialiased',WebkitTapHighlightColor:'rgba(0,0,0,0)'}}>Boss Barbers Club</h1>
+              <button 
+                onClick={handleRandevuClick}
+                className="bg-[#C58154] text-white font-bold py-2 md:py-3 px-4 md:px-8 rounded hover:bg-[#A0522D] transition-colors text-base md:text-lg mt-2 block"
+              >
+                RANDEVU AL
+              </button>
+            </div>
+            <div className="w-full lg:w-auto flex justify-center lg:justify-end">
+              <div className="bg-black/60 rounded-lg p-4 min-w-[180px] max-w-xs text-white text-sm font-poppins text-center lg:text-right mt-8 lg:mt-0">
+                <div className="font-bold mb-2 text-base">Çalışma Saatleri</div>
+                <div className="flex flex-col gap-1">
+                  <span>Pzt-Cum: 09:00 - 21:00</span>
+                  <span>Cmt: 09:00 - 22:00</span>
+                  <span>Paz: Kapalı</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Team Section */}
-      <section id="team" className="py-16 md:py-20 px-4">
+      <section id="team" className="py-10 md:py-20 px-2 md:px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Profesyonel Berberlerimiz</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -102,7 +124,6 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2">Sercan Çınar</h3>
-              <p className="text-[#C8A97E] mb-4">Master Barber</p>
               <a 
                 href="https://instagram.com/cnr.sercan" 
                 className="text-gray-400 hover:text-[#C8A97E] flex items-center justify-center gap-2"
@@ -126,7 +147,6 @@ export default function Home() {
                 />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2">Berke Akyüz</h3>
-              <p className="text-[#C8A97E] mb-4">Master Barber</p>
               <a 
                 href="https://instagram.com/akyuzberkee" 
                 className="text-gray-400 hover:text-[#C8A97E] flex items-center justify-center gap-2"
@@ -142,94 +162,64 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Hizmetlerimiz Section - Dikey Slider */}
+      <section id="hizmetlerimiz" className="py-10 md:py-24 px-2 md:px-4 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="font-ebgaramond text-white text-2xl md:text-3xl font-bold leading-tight mb-4 text-center whitespace-nowrap">BOSS BARBERS CLUB HİZMETLERİ</h2>
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-12 w-full">
+            <VerticalServiceSlider />
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="services" className="py-16 md:py-20 px-4 bg-zinc-900">
+      <section id="services" className="py-10 md:py-20 px-2 md:px-4 bg-gradient-to-b from-zinc-900 to-black">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">Premium Hizmetlerimiz</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-black p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors group">
-              <div className="text-4xl text-[#C8A97E] mb-4 flex justify-center">
-                <MdFace className="group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-4">Profesyonel Cilt Bakımı</h3>
-              <p className="text-gray-400">Uzman cilt bakımı ve terapi</p>
-            </div>
-            
-            <div className="bg-black p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors group">
-              <div className="text-4xl text-[#C8A97E] mb-4 flex justify-center">
-                <FaCut className="group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-4">Anatomik Saç Kesimi</h3>
-              <p className="text-gray-400">Yüz hatlarınıza özel kesim</p>
-            </div>
-
-            <div className="bg-black p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors group">
-              <div className="text-4xl text-[#C8A97E] mb-4 flex justify-center">
-                <GiBeard className="group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-4">Sakal Kesimi</h3>
-              <p className="text-gray-400">Profesyonel sakal şekillendirme</p>
-            </div>
-
-            <div className="bg-black p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors group">
-              <div className="text-4xl text-[#C8A97E] mb-4 flex justify-center">
-                <MdStyle className="group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-4">Saç Fön</h3>
-              <p className="text-gray-400">Profesyonel fön ve şekillendirme</p>
-            </div>
-
-            <div className="bg-black p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors group">
-              <div className="text-4xl text-[#C8A97E] mb-4 flex justify-center">
-                <MdColorize className="group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-4">Pigment Renklendirme</h3>
-              <p className="text-gray-400">Özel pigmentlerle renklendirme</p>
-            </div>
-
-            <div className="bg-black p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors group">
-              <div className="text-4xl text-[#C8A97E] mb-4 flex justify-center">
-                <TbWand className="group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-4">Perma</h3>
-              <p className="text-gray-400">Kalıcı şekillendirme</p>
-            </div>
-
-            <div className="bg-black p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors group">
-              <div className="text-4xl text-[#C8A97E] mb-4 flex justify-center">
-                <GiHairStrands className="group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-4">Keratin</h3>
-              <p className="text-gray-400">Keratin bakım ve düzleştirme</p>
-            </div>
-
-            <div className="bg-black p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors group">
-              <div className="text-4xl text-[#C8A97E] mb-4 flex justify-center">
-                <TbMassage className="group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-4">Saç Botox</h3>
-              <p className="text-gray-400">Yoğun bakım ve onarım</p>
-            </div>
-
-            <div className="bg-black p-6 rounded-lg text-center hover:bg-zinc-800 transition-colors group">
-              <div className="text-4xl text-[#C8A97E] mb-4 flex justify-center">
-                <FaUserAlt className="group-hover:scale-110 transition-transform" />
-              </div>
-              <h3 className="text-lg md:text-xl font-bold mb-4">Profesyonel Saç Bakımı</h3>
-              <p className="text-gray-400">Kapsamlı saç bakım hizmetleri</p>
-            </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-ebgaramond tracking-tight">Hizmetlerimiz</h2>
+          <p className="text-center text-zinc-400 mb-10 font-poppins">Boss Barbers Club'da sunduğumuz profesyonel hizmetler</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Saç Kesimi</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Sakal Kesimi</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Çocuk Saç Kesimi</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Saç Tarama- Fön</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Kalıcı Saç Düzleştirme</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Keratin Bakımı</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Saç Boyama</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Sakal Boyama</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Saç Renk Açma</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Perma</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Saç Bakımı</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Sakal Bakımı</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Damat Tıraşı</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Manikür</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Pedikür</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Kaş Dizayn</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Cilt Bakımı</div>
+            <div className="bg-zinc-800/80 rounded-xl shadow-lg p-8 flex items-center justify-center text-center text-white text-lg font-semibold font-poppins hover:bg-zinc-700 transition-all duration-300">Makine Body Tıraş</div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 md:py-20 px-4">
+      <section id="contact" className="py-10 md:py-20 px-2 md:px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">İletişim</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="text-center md:text-left">
               <h3 className="text-xl md:text-2xl font-bold mb-6">Adres</h3>
               <p className="text-gray-400 mb-4">Boss Barbers Club, Düğmeciler, Eyüp Sultan Blv No 105/B, 34040 Eyüpsultan/İstanbul</p>
+              <div className="w-full mt-4 rounded-lg overflow-hidden shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12041.96493475936!2d28.9262244!3d41.0434057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb0cc05843a3%3A0x8596e33d4020c465!2sBoss%20Barbers%20Club!5e0!3m2!1str!2str!4v1718030000000!5m2!1str!2str"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Boss Barbers Club Harita"
+                ></iframe>
+              </div>
               <div className="flex gap-4 mt-8 justify-center md:justify-start">
                 <a 
                   href="https://instagram.com/bossbarbersclub" 
