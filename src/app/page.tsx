@@ -61,13 +61,21 @@ export default function Home() {
       <nav className={`fixed top-0 w-full z-40 py-2 md:py-4 transition-all duration-300 ${isScrolled ? 'bg-zinc-900/90 backdrop-blur-sm' : ''}`}>
         <div className="w-full flex flex-col lg:flex-row justify-between items-center px-4 md:px-36">
           <h1 className="font-['Alfa_Slab_One'] text-[24px] md:text-[48px] font-normal text-white whitespace-nowrap text-center lg:text-left px-4">BOSS BARBERS CLUB</h1>
-          <button 
-            onClick={() => setIsMenuOpen(true)} 
-            className="text-2xl text-white lg:hidden mt-2"
-            aria-label="Menüyü Aç"
-          >
-            <FaBars />
-          </button>
+          <div className="flex flex-col items-center gap-2 lg:hidden">
+            <button 
+              onClick={() => setIsMenuOpen(true)} 
+              className="text-2xl text-white"
+              aria-label="Menüyü Aç"
+            >
+              <FaBars />
+            </button>
+            <button 
+              onClick={handleRandevuClick}
+              className="bg-[#C58154] text-white px-4 py-2 rounded hover:bg-[#A0522D] transition-all duration-300 font-['Merriweather'] text-[16px] font-light"
+            >
+              Randevu Al
+            </button>
+          </div>
           <div className="hidden lg:flex items-center gap-8">
             <a href="#about" className="font-['Merriweather'] text-[24px] font-light text-white hover:text-[#C8A97E] transition-all duration-300">Hakkımızda</a>
             <a href="#services" className="font-['Merriweather'] text-[24px] font-light text-white hover:text-[#C8A97E] transition-all duration-300">Hizmetler</a>
@@ -84,7 +92,7 @@ export default function Home() {
       </nav>
 
       {/* Separator */}
-      <div className="fixed top-[90px] md:top-[100px] w-full z-30">
+      <div className="fixed top-[130px] md:top-[100px] w-full z-20">
         <div className="relative w-full h-[2px] bg-white/50">
           <div className="absolute left-[25%] -top-4 text-white">
             <GiScissors size={32} />
