@@ -6,25 +6,25 @@ const services = [
     title: "SAÇ KESİMİ",
     image: "/images/service-haircut.jpg",
     desc: "Profesyonel saç kesimi ve stil danışmanlığı.",
-    number: "01"
+    number: "-"
   },
   {
     title: "SAKAL KESİMİ",
     image: "/images/service-shave.jpg",
     desc: "Klasik ve modern tıraş deneyimi.",
-    number: "02"
+    number: "-"
   },
   {
     title: "ÇOCUK SAÇ KESİMİ",
     image: "/images/service-beard.jpg",
     desc: "Sakal şekillendirme ve bakım.",
-    number: "03"
+    number: "-"
   },
   {
     title: "SAÇ BOYAMA",
     image: "/images/service-spa.jpg",
     desc: "Rahatlatıcı bakım ve spa hizmetleri.",
-    number: "04"
+    number: "-"
   },
 ];
 

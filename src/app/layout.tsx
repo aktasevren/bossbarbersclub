@@ -1,28 +1,31 @@
 import type { Metadata } from "next";
-import { Poppins, Montserrat, EB_Garamond } from "next/font/google";
+import { Inter, Poppins, EB_Garamond, Merriweather, Bitter } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  subsets: ['latin'],
+const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ 
   weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
+  subsets: ["latin"],
+  variable: '--font-poppins'
 });
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '900'],
-  variable: '--font-montserrat',
+const ebGaramond = EB_Garamond({ 
+  subsets: ["latin"],
+  variable: '--font-ebgaramond'
 });
-
-const ebGaramond = EB_Garamond({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-ebgaramond',
+const merriweather = Merriweather({
+  weight: ['300'],
+  subsets: ["latin"],
+  variable: '--font-merriweather'
+});
+const bitter = Bitter({
+  weight: ['400'],
+  subsets: ["latin"],
+  variable: '--font-bitter'
 });
 
 export const metadata: Metadata = {
-  title: "Boss Barbers Club - Profesyonel Berberlik Hizmetleri",
-  description: "İstanbul'un en iyi berber dükkanı. Profesyonel saç kesimi, sakal tıraşı ve bakım hizmetleri.",
+  title: "Boss Barbers Club",
+  description: "Profesyonel Berber Dükkanı",
 };
 
 export default function RootLayout({
@@ -32,7 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body className={`${poppins.variable} ${montserrat.variable} ${ebGaramond.variable} font-poppins`}>{children}</body>
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet" />
+      </head>
+      <body className={`${inter.className} ${poppins.variable} ${ebGaramond.variable} ${merriweather.variable} ${bitter.variable}`}>{children}</body>
     </html>
   );
 }
