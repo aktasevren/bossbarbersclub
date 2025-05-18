@@ -4,7 +4,6 @@ import Image from "next/image";
 import { FaInstagram, FaWhatsapp, FaBars, FaTimes } from 'react-icons/fa';
 import { GiScissors } from 'react-icons/gi';
 import { useState, useEffect } from 'react';
-import VerticalServiceSlider from "./VerticalServiceSlider";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -112,10 +111,13 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 w-full mt-24 md:mt-32">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-4 md:gap-8">
             <div className="flex-1">
-              <h2 className="font-['Bitter'] text-[36px] md:text-[54px] font-normal text-white leading-tight">
-                GELENEKSEL SANAT,<br />
-                MODERN DOKUNUŞ!
-              </h2>
+              <div className="flex flex-col gap-4 md:gap-6">
+                <span className="font-['Merriweather'] text-[18px] md:text-[22px] font-light text-white/80 mb-2 md:mb-4 block">Sadece bir saç tıraşı değil, bir deneyim.</span>
+                <h2 className="font-['Bitter'] text-[36px] md:text-[54px] font-normal text-white leading-tight uppercase">
+                  GELENEKSEL SANAT,<br />MODERN DOKUNUŞ!
+                </h2>
+                <span className="font-['Merriweather'] text-[16px] md:text-[20px] font-light text-white/80 mt-2 md:mt-4 block">Berber salonumuz, kendine özen gösteren erkekler için özel olarak tasarlanmış bir mekândır.</span>
+              </div>
             </div>
             <div className="w-full lg:w-auto flex justify-center lg:justify-end">
               <div className="bg-black/30 backdrop-blur-sm rounded-lg p-4 min-w-[180px] max-w-xs text-white text-sm font-poppins text-center lg:text-right mt-8 lg:mt-0 border border-gray-500/30">
