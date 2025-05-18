@@ -23,7 +23,9 @@ export default function Home() {
   }, []);
 
   const handleRandevuClick = () => {
-    window.location.href = "https://wa.me/+905555555555";
+    const phone = '905312653223';
+    const message = encodeURIComponent('Merhaba, websitenizden ulaşıyorum. Şu gün ve saatte müsait misiniz?');
+    window.location.href = `https://wa.me/${phone}?text=${message}`;
   };
 
   return (
