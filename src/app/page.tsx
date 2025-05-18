@@ -121,8 +121,8 @@ export default function Home() {
               <div className="bg-black/30 backdrop-blur-sm rounded-lg p-4 min-w-[180px] max-w-xs text-white text-sm font-poppins text-center lg:text-right mt-8 lg:mt-0 border border-gray-500/30">
                 <div className="font-bold mb-2 text-base">Çalışma Saatleri</div>
                 <div className="flex flex-col gap-1">
-                  <span>Pzt-Cum: 09:00 - 21:00</span>
-                  <span>Cmt: 09:00 - 22:00</span>
+                  <span>Pzt-Cum: 08:30 - 21:00</span>
+                  <span>Cmt: 08:30 - 22:00</span>
                   <span>Paz: Kapalı</span>
                 </div>
               </div>
@@ -186,15 +186,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Hizmetlerimiz Section - Dikey Slider */}
-      <section id="hizmetlerimiz" className="px-2 md:px-4 bg-black pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="font-['Merriweather'] text-[24px] font-light text-white text-center mb-18">Boss Barbers Club Hizmetleri</h2>
-          <div className="flex flex-col lg:flex-row justify-center items-center gap-12 w-full">
-            <VerticalServiceSlider />
-          </div>
-        </div>
-      </section>
 
       {/* Services Section */}
       <section id="services" className="py-10 md:py-20 px-2 md:px-4 bg-gradient-to-b from-zinc-900 to-black">
