@@ -28,11 +28,13 @@ export default function Home() {
   // Gün seçeneklerini oluştur
   const getDateOptions = () => {
     const options = [];
-    const today = new Date();
-    for (let i = 0; i < 7; i++) {
-      const date = new Date(today);
-      date.setDate(today.getDate() + i);
-      const label = i === 0 ? 'Bugün' : date.toLocaleDateString('tr-TR', { weekday: 'long', day: '2-digit', month: '2-digit' });
+    const now = new Date();
+    const isAfter2200 = now.getHours() > 22 || (now.getHours() === 22 && now.getMinutes() > 0);
+    const start = isAfter2200 ? 1 : 0;
+    for (let i = start; i < start + 7; i++) {
+      const date = new Date(now);
+      date.setDate(now.getDate() + i);
+      const label = (i === 0 && start === 0) ? 'Bugün' : date.toLocaleDateString('tr-TR', { weekday: 'long', day: '2-digit', month: '2-digit' });
       options.push({ value: date.toISOString().slice(0, 10), label });
     }
     return options;
@@ -58,7 +60,7 @@ export default function Home() {
     e.preventDefault();
     if (!randevuGun || !randevuSaat) return;
     const gunLabel = getDateOptions().find(opt => opt.value === randevuGun)?.label || randevuGun;
-    const mesaj = `RANDEVU ISTEĞİ\nGün: ${gunLabel}\nSaat: ${randevuSaat}`;
+    const mesaj = `Merhaba, şu gün ve saatte müsait misiniz?\nGün: ${gunLabel}\nSaat: ${randevuSaat}`;
     const phone = '+905383690468';
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(mesaj)}`;
     window.open(url, '_blank');
