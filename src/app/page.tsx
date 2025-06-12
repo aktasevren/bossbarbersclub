@@ -185,11 +185,10 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-4 md:gap-8">
             <div className="flex-1">
               <div className="flex flex-col gap-4 md:gap-6">
-                <span className="font-['Merriweather'] text-[18px] md:text-[22px] font-light text-white/80 mb-2 md:mb-4 block mt-8 md:mt-0">Sadece bir saç tıraşı değil, bir deneyim.</span>
                 <h2 className="font-['Bitter'] text-[36px] md:text-[54px] font-normal text-white leading-tight uppercase">
                   GELENEKSEL SANAT,<br />MODERN DOKUNUŞ!
                 </h2>
-                <span className="font-['Merriweather'] text-[16px] md:text-[20px] font-light text-white/80 mt-2 md:mt-4 block">Boss Barbers Club&apos;da, İstanbul Eyüp Sultan ilçesinde profesyonel erkek kuaförü ve berber hizmeti sunuyoruz. Modern ve klasik saç kesimi, sakal tıraşı, çocuk saç kesimi ve kişiye özel bakım uygulamalarıyla müşteri memnuniyetini ön planda tutuyoruz. Hijyenik ortamımızda, deneyimli ekibimizle her yaşa ve stile uygun çözümler sunuyoruz.</span>
+                <span className="font-['Merriweather'] text-[18px] md:text-[22px] font-light text-white/80 mb-2 md:mb-4 block mt-8 md:mt-0">Sadece bir saç tıraşı değil, bir deneyim.</span>
               </div>
             </div>
             <div className="w-full lg:w-auto flex justify-center lg:justify-end">
@@ -206,12 +205,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Ek SEO Açıklama */}
-      <section className="max-w-4xl mx-auto px-4 py-6">
-        <h2 className="text-2xl font-bold text-[#C8A97E] mb-2">İstanbul Eyüp Sultan Erkek Kuaförü & Berber</h2>
-        <p className="text-zinc-300 text-base mb-2">Boss Barbers Club, İstanbul Eyüp Sultan ilçesinde erkek kuaförü ve berber olarak profesyonel saç kesimi, sakal tıraşı, saç bakımı ve çocuk saç kesimi hizmetleri sunar. Modern ve klasik saç modelleri, hijyenik ortam, müşteri memnuniyeti ve uygun fiyatlarla bölgenin önde gelen berberlerinden biriyiz. Çocuklara özel saç kesimi ve aile dostu hizmet anlayışımızla her yaştan misafirimize özen gösteriyoruz.</p>
-        <p className="text-zinc-300 text-base">Eyüp Sultan'da erkek kuaförü arıyorsanız, deneyimli ekibimizle Boss Barbers Club olarak size en iyi hizmeti sunmak için buradayız. Randevu almak ve profesyonel berber deneyimi yaşamak için bizimle iletişime geçebilirsiniz.</p>
+      {/* Services Section */}
+      <section id="services" className="py-10 md:py-20 px-2 md:px-4 bg-gradient-to-b from-zinc-900 to-black">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-['Merriweather'] text-[28px] md:text-[36px] font-bold text-[#C8A97E] text-center mb-4 tracking-wide drop-shadow">Hizmetlerimiz</h2>
+          <p className="text-center text-zinc-400 mb-10 font-['Merriweather'] text-[20px] font-light">Boss Barbers Club&apos;da sunduğumuz profesyonel erkek kuaförü hizmetleri: İstanbul Eyüp Sultan'da saç kesimi, sakal tıraşı, çocuk saç kesimi, saç bakımı ve modern stillerle hizmetinizdeyiz. Hijyen, kalite ve müşteri memnuniyeti önceliğimizdir.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Saç Kesimi */}
+            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
+              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><path d="M19.5 4.5l-15 15M4.5 4.5l15 15" stroke="#C8A97E" strokeWidth="2.2" strokeLinecap="round"/><circle cx="6.5" cy="6.5" r="2.5" stroke="#C8A97E" strokeWidth="2"/><circle cx="17.5" cy="17.5" r="2.5" stroke="#C8A97E" strokeWidth="2"/></svg>
+              <h3 className="text-xl font-bold text-white mb-2">Saç Kesimi</h3>
+              <p className="text-zinc-300 text-sm">Modern ve klasik erkek saç kesimi. Yüz tipinize uygun, profesyonel stil önerileriyle en iyi görünüm.</p>
+            </div>
+            {/* Sakal Kesimi */}
+            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
+              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><path d="M4 17c0 2.5 3.5 3.5 8 3.5s8-1 8-3.5V7c0-2.5-3.5-3.5-8-3.5S4 4.5 4 7v10z" stroke="#C8A97E" strokeWidth="2.2"/><path d="M8 14c.5 1.5 2.5 2.5 4 2.5s3.5-1 4-2.5" stroke="#C8A97E" strokeWidth="2.2"/></svg>
+              <h3 className="text-xl font-bold text-white mb-2">Sakal Kesimi</h3>
+              <p className="text-zinc-300 text-sm">Düzgün ve simetrik sakal kesimi. Yüz hatlarınıza uygun, özenli ve hijyenik sakal şekillendirme.</p>
+            </div>
+            {/* Çocuk Saç Kesimi */}
+            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
+              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="#C8A97E" strokeWidth="2.2"/><path d="M4 20c0-3.5 3.5-6 8-6s8 2.5 8 6" stroke="#C8A97E" strokeWidth="2.2"/></svg>
+              <h3 className="text-xl font-bold text-white mb-2">Çocuk Saç Kesimi</h3>
+              <p className="text-zinc-300 text-sm">Çocuklara özel konforlu ve eğlenceli saç kesimi. Hijyenik ve güvenli ortamda profesyonel hizmet.</p>
+            </div>
+            {/* Saç Şekillendirme */}
+            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
+              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><path d="M6 18c0-3 4-6 6-6s6 3 6 6" stroke="#C8A97E" strokeWidth="2.2"/><path d="M12 12V6" stroke="#C8A97E" strokeWidth="2.2"/><circle cx="12" cy="4" r="2" stroke="#C8A97E" strokeWidth="2.2"/></svg>
+              <h3 className="text-xl font-bold text-white mb-2">Saç Şekillendirme</h3>
+              <p className="text-zinc-300 text-sm">Fön, tarama ve modern saç şekillendirme teknikleriyle gün boyu kalıcı stil.</p>
+            </div>
+            {/* Keratin & Bakım */}
+            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
+              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="8" stroke="#C8A97E" strokeWidth="2.2"/><path d="M8 16c1-2 3-4 4-4s3 2 4 4" stroke="#C8A97E" strokeWidth="2.2"/></svg>
+              <h3 className="text-xl font-bold text-white mb-2">Keratin & Saç Bakımı</h3>
+              <p className="text-zinc-300 text-sm">Yıpranmış saçlara özel keratin ve bakım uygulamaları ile sağlıklı ve parlak saçlar.</p>
+            </div>
+            {/* Damat Tıraşı */}
+            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
+              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="9" stroke="#C8A97E" strokeWidth="2.2"/><path d="M8 16c1-2 3-4 4-4s3 2 4 4" stroke="#C8A97E" strokeWidth="2.2"/></svg>
+              <h3 className="text-xl font-bold text-white mb-2">Damat Tıraşı</h3>
+              <p className="text-zinc-300 text-sm">Özel günler için profesyonel damat tıraşı ve bakım hizmeti. Unutulmaz bir deneyim.</p>
+            </div>
+          </div>
+        </div>
       </section>
+
+
 
       {/* Team Section */}
       <section id="team" className="py-10 md:py-20 px-2 md:px-4">
@@ -310,49 +350,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-10 md:py-20 px-2 md:px-4 bg-gradient-to-b from-zinc-900 to-black">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-['Merriweather'] text-[28px] md:text-[36px] font-bold text-[#C8A97E] text-center mb-4 tracking-wide drop-shadow">Hizmetlerimiz</h2>
-          <p className="text-center text-zinc-400 mb-10 font-['Merriweather'] text-[20px] font-light">Boss Barbers Club&apos;da sunduğumuz profesyonel erkek kuaförü hizmetleri: İstanbul Eyüp Sultan'da saç kesimi, sakal tıraşı, çocuk saç kesimi, saç bakımı ve modern stillerle hizmetinizdeyiz. Hijyen, kalite ve müşteri memnuniyeti önceliğimizdir.</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Saç Kesimi */}
-            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
-              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><path d="M19.5 4.5l-15 15M4.5 4.5l15 15" stroke="#C8A97E" strokeWidth="2.2" strokeLinecap="round"/><circle cx="6.5" cy="6.5" r="2.5" stroke="#C8A97E" strokeWidth="2"/><circle cx="17.5" cy="17.5" r="2.5" stroke="#C8A97E" strokeWidth="2"/></svg>
-              <h3 className="text-xl font-bold text-white mb-2">Saç Kesimi</h3>
-              <p className="text-zinc-300 text-sm">Modern ve klasik erkek saç kesimi. Yüz tipinize uygun, profesyonel stil önerileriyle en iyi görünüm.</p>
-            </div>
-            {/* Sakal Kesimi */}
-            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
-              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><path d="M4 17c0 2.5 3.5 3.5 8 3.5s8-1 8-3.5V7c0-2.5-3.5-3.5-8-3.5S4 4.5 4 7v10z" stroke="#C8A97E" strokeWidth="2.2"/><path d="M8 14c.5 1.5 2.5 2.5 4 2.5s3.5-1 4-2.5" stroke="#C8A97E" strokeWidth="2.2"/></svg>
-              <h3 className="text-xl font-bold text-white mb-2">Sakal Kesimi</h3>
-              <p className="text-zinc-300 text-sm">Düzgün ve simetrik sakal kesimi. Yüz hatlarınıza uygun, özenli ve hijyenik sakal şekillendirme.</p>
-            </div>
-            {/* Çocuk Saç Kesimi */}
-            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
-              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" stroke="#C8A97E" strokeWidth="2.2"/><path d="M4 20c0-3.5 3.5-6 8-6s8 2.5 8 6" stroke="#C8A97E" strokeWidth="2.2"/></svg>
-              <h3 className="text-xl font-bold text-white mb-2">Çocuk Saç Kesimi</h3>
-              <p className="text-zinc-300 text-sm">Çocuklara özel konforlu ve eğlenceli saç kesimi. Hijyenik ve güvenli ortamda profesyonel hizmet.</p>
-            </div>
-            {/* Saç Şekillendirme */}
-            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
-              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><path d="M6 18c0-3 4-6 6-6s6 3 6 6" stroke="#C8A97E" strokeWidth="2.2"/><path d="M12 12V6" stroke="#C8A97E" strokeWidth="2.2"/><circle cx="12" cy="4" r="2" stroke="#C8A97E" strokeWidth="2.2"/></svg>
-              <h3 className="text-xl font-bold text-white mb-2">Saç Şekillendirme</h3>
-              <p className="text-zinc-300 text-sm">Fön, tarama ve modern saç şekillendirme teknikleriyle gün boyu kalıcı stil.</p>
-            </div>
-            {/* Keratin & Bakım */}
-            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
-              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="8" stroke="#C8A97E" strokeWidth="2.2"/><path d="M8 16c1-2 3-4 4-4s3 2 4 4" stroke="#C8A97E" strokeWidth="2.2"/></svg>
-              <h3 className="text-xl font-bold text-white mb-2">Keratin & Saç Bakımı</h3>
-              <p className="text-zinc-300 text-sm">Yıpranmış saçlara özel keratin ve bakım uygulamaları ile sağlıklı ve parlak saçlar.</p>
-            </div>
-            {/* Damat Tıraşı */}
-            <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
-              <svg className="mb-4" width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="9" stroke="#C8A97E" strokeWidth="2.2"/><path d="M8 16c1-2 3-4 4-4s3 2 4 4" stroke="#C8A97E" strokeWidth="2.2"/></svg>
-              <h3 className="text-xl font-bold text-white mb-2">Damat Tıraşı</h3>
-              <p className="text-zinc-300 text-sm">Özel günler için profesyonel damat tıraşı ve bakım hizmeti. Unutulmaz bir deneyim.</p>
-            </div>
-          </div>
+            {/* Hakkımızda Section */}
+            <section id="aboutus" className="max-w-3xl mx-auto px-4 py-10">
+        <div className="bg-zinc-900/90 rounded-2xl shadow-xl border-2 border-[#C8A97E] p-8 md:p-12 flex flex-col items-center text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#C8A97E] mb-4 tracking-wide drop-shadow">Hakkımızda</h2>
+          <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">İstanbul Eyüp Sultan Erkek Kuaförü &amp; Berber</h3>
+          <p className="text-zinc-300 text-base md:text-lg mb-4 max-w-2xl">Boss Barbers Club, İstanbul Eyüp Sultan ilçesinde erkek kuaförü ve berber olarak profesyonel saç kesimi, sakal tıraşı, saç bakımı ve çocuk saç kesimi hizmetleri sunar. Modern ve klasik saç modelleri, hijyenik ortam, müşteri memnuniyeti ve uygun fiyatlarla bölgenin önde gelen berberlerinden biriyiz.</p>
+          <p className="text-zinc-300 text-base md:text-lg max-w-2xl">Çocuklara özel saç kesimi ve aile dostu hizmet anlayışımızla her yaştan misafirimize özen gösteriyoruz. Eyüp Sultan&apos;da erkek kuaförü arıyorsanız, deneyimli ekibimizle Boss Barbers Club olarak size en iyi hizmeti sunmak için buradayız. Randevu almak ve profesyonel berber deneyimi yaşamak için bizimle iletişime geçebilirsiniz.</p>
         </div>
       </section>
 
