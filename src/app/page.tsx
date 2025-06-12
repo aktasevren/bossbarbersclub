@@ -209,7 +209,7 @@ export default function Home() {
       <section id="services" className="py-10 md:py-20 px-2 md:px-4 bg-gradient-to-b from-zinc-900 to-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-['Merriweather'] text-[28px] md:text-[36px] font-bold text-[#C8A97E] text-center mb-4 tracking-wide drop-shadow">Hizmetlerimiz</h2>
-          <p className="text-center text-zinc-400 mb-10 font-['Merriweather'] text-[20px] font-light">Boss Barbers Club&apos;da sunduğumuz profesyonel erkek kuaförü hizmetleri: İstanbul Eyüp Sultan'da saç kesimi, sakal tıraşı, çocuk saç kesimi, saç bakımı ve modern stillerle hizmetinizdeyiz. Hijyen, kalite ve müşteri memnuniyeti önceliğimizdir.</p>
+          <p className="text-center text-zinc-400 mb-10 font-['Merriweather'] text-[20px] font-light">Boss Barbers Club&apos;da sunduğumuz profesyonel erkek kuaförü hizmetleri: İstanbul Eyüp Sultan&apos;da saç kesimi, sakal tıraşı, çocuk saç kesimi, saç bakımı ve modern stillerle hizmetinizdeyiz. Hijyen, kalite ve müşteri memnuniyeti önceliğimizdir.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Saç Kesimi */}
             <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
@@ -251,13 +251,11 @@ export default function Home() {
         </div>
       </section>
 
-
-
       {/* Team Section */}
       <section id="team" className="py-10 md:py-20 px-2 md:px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-['Merriweather'] text-[28px] md:text-[36px] font-bold text-[#C8A97E] text-center mb-12 md:mb-16 tracking-wide drop-shadow">Profesyonel Berberlerimiz</h2>
-          <p className="text-zinc-300 text-center mb-8">Boss Barbers Club ekibi, İstanbul Eyüp Sultan'da erkek kuaförlüğü ve berberlik alanında uzman, müşteri memnuniyetine önem veren, hijyenik ve güler yüzlü profesyonellerden oluşur. Çocuklara özel saç kesimi ve aile dostu hizmet anlayışımızla her yaştan misafirimize özen gösteriyoruz.</p>
+          <p className="text-zinc-300 text-center mb-8">Boss Barbers Club ekibi, İstanbul Eyüp Sultan&apos;da erkek kuaförlüğü ve berberlik alanında uzman, müşteri memnuniyetine önem veren, hijyenik ve güler yüzlü profesyonellerden oluşur. Çocuklara özel saç kesimi ve aile dostu hizmet anlayışımızla her yaştan misafirimize özen gösteriyoruz.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Sercan Çınar */}
             <div className="relative bg-gradient-to-br from-zinc-900 via-black to-zinc-800 border-2 border-[#C8A97E] rounded-2xl shadow-xl p-8 flex flex-col items-center hover:scale-[1.03] transition-transform duration-300 group">
