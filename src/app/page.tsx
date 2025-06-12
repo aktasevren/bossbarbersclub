@@ -1,7 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { FaInstagram, FaWhatsapp, FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { GiScissors } from 'react-icons/gi';
 import { useState, useEffect } from 'react';
 
@@ -42,7 +42,7 @@ export default function Home() {
   const getSaatOptions = () => {
     const saatler = [];
     for (let saat = 9; saat <= 21; saat++) {
-      for (let dakika of [0, 15, 30, 45]) {
+      for (const dakika of [0, 15, 30, 45]) {
         const saatStr = saat.toString().padStart(2, '0');
         const dakikaStr = dakika.toString().padStart(2, '0');
         saatler.push(`${saatStr}:${dakikaStr}`);
@@ -65,12 +65,6 @@ export default function Home() {
     setShowRandevuModal(false);
     setRandevuGun('');
     setRandevuSaat('');
-  };
-
-  const handleRandevuClick = () => {
-    const phone = '905312653223';
-    const message = encodeURIComponent('Merhaba, websitenizden ulaşıyorum. Şu gün ve saatte müsait misiniz?');
-    window.location.href = `https://wa.me/${phone}?text=${message}`;
   };
 
   return (
@@ -195,7 +189,7 @@ export default function Home() {
                 <h2 className="font-['Bitter'] text-[36px] md:text-[54px] font-normal text-white leading-tight uppercase">
                   GELENEKSEL SANAT,<br />MODERN DOKUNUŞ!
                 </h2>
-                <span className="font-['Merriweather'] text-[16px] md:text-[20px] font-light text-white/80 mt-2 md:mt-4 block">Berber salonumuz, kendine özen gösteren erkekler için özel olarak tasarlanmış bir mekândır.</span>
+                <span className="font-['Merriweather'] text-[16px] md:text-[20px] font-light text-white/80 mt-2 md:mt-4 block">Berber salonumuz, kendine özen gösteren erkekler için özel olarak tasarlanmış bir mek&acirc;ndır.</span>
               </div>
             </div>
             <div className="w-full lg:w-auto flex justify-center lg:justify-end">
