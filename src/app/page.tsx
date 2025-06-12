@@ -189,7 +189,7 @@ export default function Home() {
                 <h2 className="font-['Bitter'] text-[36px] md:text-[54px] font-normal text-white leading-tight uppercase">
                   GELENEKSEL SANAT,<br />MODERN DOKUNUŞ!
                 </h2>
-                <span className="font-['Merriweather'] text-[16px] md:text-[20px] font-light text-white/80 mt-2 md:mt-4 block">Berber salonumuz, kendine özen gösteren erkekler için özel olarak tasarlanmış bir mek&acirc;ndır.</span>
+                <span className="font-['Merriweather'] text-[16px] md:text-[20px] font-light text-white/80 mt-2 md:mt-4 block">Boss Barbers Club&apos;da, İstanbul Eyüp Sultan ilçesinde profesyonel erkek kuaförü ve berber hizmeti sunuyoruz. Modern ve klasik saç kesimi, sakal tıraşı, çocuk saç kesimi ve kişiye özel bakım uygulamalarıyla müşteri memnuniyetini ön planda tutuyoruz. Hijyenik ortamımızda, deneyimli ekibimizle her yaşa ve stile uygun çözümler sunuyoruz.</span>
               </div>
             </div>
             <div className="w-full lg:w-auto flex justify-center lg:justify-end">
@@ -206,10 +206,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Ek SEO Açıklama */}
+      <section className="max-w-4xl mx-auto px-4 py-6">
+        <h2 className="text-2xl font-bold text-[#C8A97E] mb-2">İstanbul Eyüp Sultan Erkek Kuaförü & Berber</h2>
+        <p className="text-zinc-300 text-base mb-2">Boss Barbers Club, İstanbul Eyüp Sultan ilçesinde erkek kuaförü ve berber olarak profesyonel saç kesimi, sakal tıraşı, saç bakımı ve çocuk saç kesimi hizmetleri sunar. Modern ve klasik saç modelleri, hijyenik ortam, müşteri memnuniyeti ve uygun fiyatlarla bölgenin önde gelen berberlerinden biriyiz. Çocuklara özel saç kesimi ve aile dostu hizmet anlayışımızla her yaştan misafirimize özen gösteriyoruz.</p>
+        <p className="text-zinc-300 text-base">Eyüp Sultan'da erkek kuaförü arıyorsanız, deneyimli ekibimizle Boss Barbers Club olarak size en iyi hizmeti sunmak için buradayız. Randevu almak ve profesyonel berber deneyimi yaşamak için bizimle iletişime geçebilirsiniz.</p>
+      </section>
+
       {/* Team Section */}
       <section id="team" className="py-10 md:py-20 px-2 md:px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-['Merriweather'] text-[28px] md:text-[36px] font-bold text-[#C8A97E] text-center mb-12 md:mb-16 tracking-wide drop-shadow">Profesyonel Berberlerimiz</h2>
+          <p className="text-zinc-300 text-center mb-8">Boss Barbers Club ekibi, İstanbul Eyüp Sultan'da erkek kuaförlüğü ve berberlik alanında uzman, müşteri memnuniyetine önem veren, hijyenik ve güler yüzlü profesyonellerden oluşur. Çocuklara özel saç kesimi ve aile dostu hizmet anlayışımızla her yaştan misafirimize özen gösteriyoruz.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Sercan Çınar */}
             <div className="relative bg-gradient-to-br from-zinc-900 via-black to-zinc-800 border-2 border-[#C8A97E] rounded-2xl shadow-xl p-8 flex flex-col items-center hover:scale-[1.03] transition-transform duration-300 group">
@@ -306,7 +314,7 @@ export default function Home() {
       <section id="services" className="py-10 md:py-20 px-2 md:px-4 bg-gradient-to-b from-zinc-900 to-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-['Merriweather'] text-[28px] md:text-[36px] font-bold text-[#C8A97E] text-center mb-4 tracking-wide drop-shadow">Hizmetlerimiz</h2>
-          <p className="text-center text-zinc-400 mb-10 font-['Merriweather'] text-[20px] font-light">Boss Barbers Club&apos;da sunduğumuz profesyonel erkek kuaförü hizmetleri</p>
+          <p className="text-center text-zinc-400 mb-10 font-['Merriweather'] text-[20px] font-light">Boss Barbers Club&apos;da sunduğumuz profesyonel erkek kuaförü hizmetleri: İstanbul Eyüp Sultan'da saç kesimi, sakal tıraşı, çocuk saç kesimi, saç bakımı ve modern stillerle hizmetinizdeyiz. Hijyen, kalite ve müşteri memnuniyeti önceliğimizdir.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Saç Kesimi */}
             <div className="bg-zinc-900/90 border-2 border-[#C8A97E] rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-[1.03] transition-transform duration-300 group">
