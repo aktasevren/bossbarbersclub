@@ -61,7 +61,7 @@ export default function Home() {
     if (!randevuGun || !randevuSaat) return;
     const gunLabel = getDateOptions().find(opt => opt.value === randevuGun)?.label || randevuGun;
     const mesaj = `Merhaba, şu gün ve saatte müsait misiniz?\nGün: ${gunLabel}\nSaat: ${randevuSaat}`;
-    const phone = '+905383690468';
+    const phone = '+905312653223';
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(mesaj)}`;
     window.open(url, '_blank');
     setShowRandevuModal(false);
